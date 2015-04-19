@@ -31,7 +31,7 @@ function nextPage() {
 }
 $(document).ready(function () {
 
-    $(".next").click(function changePage() {
+    $(".next").click(function (event) {
         if (currentPage <= 2) {
             nextPage();
             currentPage += 1;
