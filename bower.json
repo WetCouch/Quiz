@@ -1,0 +1,20 @@
+{
+  "name": "Quiz",
+  "version": "0.0.0",
+  "homepage": "https://github.com/WetCouch/Quiz",
+  "authors": [
+    "Wojtek Janoszek <wetcouch46wojtek@gmail.com>"
+  ],
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

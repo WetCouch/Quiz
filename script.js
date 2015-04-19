@@ -18,19 +18,25 @@ var questions = [{
     correctAnswer: 0
 }];
 
-function nextPage () {
+function nextPage() {
     page = currentPage + 1;
-    function allSels (num) {
+    function allSels(num) {
         $("#sel" + num).html("<input type='radio' name='1'/>" + questions[page].choices[num])
     }
+
     $("#question").text(questions[page].question);
     allSels(0);
     allSels(1);
     allSels(2);
 }
 $(document).ready(function () {
+
     $(".next").click(function changePage() {
-        nextPage();
-        currentPage += 1;
-    });
+        if (currentPage <= 2) {
+            nextPage();
+            currentPage += 1;
+        } else if (currentPage == 3) {
+            $('#container').hide();
+        }
+    })
 });
