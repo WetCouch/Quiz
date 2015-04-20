@@ -36,7 +36,7 @@ input {
     margin-right: 10px;
 }
 
-.box p {
+p {
     color: #5C5E5D;
     margin-left: 30px;
     margin-top: 40px;
@@ -76,30 +76,4 @@ input {
     color: #5C5E5D;
     padding-top: 150px;
     text-align: center;
-}
-
-#error {
-    font-size: 1.25em;
-    text-align: center;
-    padding: 40px;
-    background-color: #00ADD9;
-    color: #F3F5F2;
-    height: 70px;
-    width: 250px;
-    position: absolute;
-    margin-top: -350px;
-    margin-left: 550px;
-    box-shadow: 6px 6px 11px -5px rgba(0,0,0,0.75);
-}
-
-.close {
-    padding: 10px 15px;
-    font-size: 0.5em;
-    background: #064D8D;
-    color: #fff;
-    border: 1px solid black;
-}
-
-.close:hover {
-    color: #9BC11C;
 }

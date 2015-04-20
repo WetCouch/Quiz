@@ -32,15 +32,11 @@ function nextPage() {
 $(document).ready(function () {
 
     $("#final").hide();
-    $("#error").hide();
 
     $(".next").click(function (event) {
 
         if (!$("input:radio:checked").val()) {
-            $("#error").show();
-            $(".close").click(function () {
-                $("#error").hide();
-            });
+            alert('You need to select one option!')
         } else {
             if (currentPage < 2) {
                 if (currentPage == 0) {
