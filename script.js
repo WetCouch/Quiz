@@ -21,7 +21,7 @@ var questions = [{
 function nextPage() {
     page = currentPage + 1;
     function allSels(num) {
-        $("#sel" + num).html("<input type='radio' name='1'/>" + questions[page].choices[num])
+        $("#sel" + num).html("<input id='chbox" + num +"' type='radio' name='1'/>" + questions[page].choices[num])
     }
 
     $("#question").text(questions[page].question);
@@ -34,12 +34,31 @@ $(document).ready(function () {
     $("#final").hide();
 
     $(".next").click(function (event) {
-        if (currentPage < 2) {
-            nextPage();
-            currentPage += 1;
-        } else if (currentPage == 2) {
-            $('#container').hide();
-            $('#final').show();
+
+        if (!$("input:radio:checked").val()) {
+            alert('You need to select one option!')
+        } else {
+            if (currentPage < 2) {
+                if (currentPage == 0) {
+                    if ($('#chbox2').prop("checked")) {
+                        score += 1;
+                    }
+                } else if (currentPage == 1) {
+                    if ($('#chbox1').prop("checked")) {
+                        score += 1;
+                    }
+                }
+                nextPage();
+                currentPage += 1;
+            }
+            else if (currentPage == 2) {
+                if ($('#chbox0').prop("checked")) {
+                    score += 1;
+                }
+                $('#container').hide();
+                $('#final').show();
+                $('#finalScore').html("Congratulations! You hit " + score + " out of 3 proper answers!");
+            }
         }
     })
 });
