@@ -22,7 +22,7 @@ h1 {
     box-shadow: 6px 6px 11px -5px rgba(0,0,0,0.75);
 }
 
-h2 {
+.box h2 {
     color: #9BC11C;
     padding-top: 30px;
     text-align: center;
@@ -55,9 +55,25 @@ p {
 }
 
 .next:active {
-    color: #5C5E5D
+    color: #5C5E5D;
 }
 
 .next:hover {
-    color: #9BC11C
+    color: #9BC11C;
+}
+
+#final {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 400px;
+    background-color: #F3F5F2;
+    box-shadow: 6px 6px 11px -5px rgba(0,0,0,0.75);
+}
+
+#finalScore {
+    color: #5C5E5D;
+    padding-top: 150px;
+    text-align: center;
 }

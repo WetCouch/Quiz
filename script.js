@@ -31,12 +31,15 @@ function nextPage() {
 }
 $(document).ready(function () {
 
+    $("#final").hide();
+
     $(".next").click(function (event) {
-        if (currentPage <= 2) {
+        if (currentPage < 2) {
             nextPage();
             currentPage += 1;
-        } else if (currentPage == 3) {
+        } else if (currentPage == 2) {
             $('#container').hide();
+            $('#final').show();
         }
     })
 });
